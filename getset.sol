@@ -10,7 +10,6 @@ contract MyContract {
 
     function setMyString(string memory _value) public {
         myString = _value;
-        return myString;
     }
 
     function getMyString() public view returns (string memory) {
@@ -19,7 +18,6 @@ contract MyContract {
 
     function setMyUint(uint _value) public {
         myUint = _value;
-        return myUint;
     }
 
     function getMyUint() public view returns (uint) {
@@ -28,7 +26,6 @@ contract MyContract {
 
     function setMyBool(bool _value) public {
         myBool = _value;
-        return myBool;
     }
 
     function getMyBool() public view returns (bool) {
@@ -37,7 +34,6 @@ contract MyContract {
 
     function setMyAddress(address _value) public {
         myAddress = _value;
-        return myAddress;
     }
 
     function getMyAddress() public view returns (address) {
