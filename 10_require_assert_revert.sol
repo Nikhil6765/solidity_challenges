@@ -1,19 +1,21 @@
 //SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
-// Error => Runtime Error Solving
-// # types -> 1. revert 2. assert 3. require
-
-contract MyContract {
 
 
-    address owner;
+contract error {
 
-    function testError(address _owner) public  {
-        require(msg.sender == _owner, "Only owner should be the function caller");
-        owner = _owner;
+
+    address public owner;
+    uint public count;
+    
+    constructor(){
+        owner=msg.sender;
     }
 
-
+    function call() public {
+        count++;
+        require(msg.sender == owner, "Only owner should be the function caller");
+    }
 // custom error
     error InsufficientBalance(uint balance, uint withdrawAmount);
 
@@ -29,4 +31,5 @@ contract MyContract {
     function testAssert() public view {
     assert(num >= 0);
     } 
+   
 }
